@@ -62,10 +62,6 @@ const calculate = () => {
       result += item;
     }
   });
-  if (result.split(' ').length % 2 === 0) {
-    state.expression = 'Невозможно вычислить';
-    render();
-  }
   state.expression = [...math.evaluate(result).toString()];
   render();
 };
